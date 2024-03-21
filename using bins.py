@@ -15,10 +15,12 @@ so we can easily estimate the result by viewing the graph
 '''
 import pandas as pd
 import numpy as np
+import matplotlib.pyplot as plt
 df = pd.read_csv("C:\\Ram's Works\\Online Learning\\COURSERA\\IBM DATA SCIENCE\\Data Analysis with python\\Files\\archive\\car_price_prediction.csv")
 print(df.iloc[2])
 bins = np.linspace(df["Price"].min(),df["Price"].max(),4)
 groups = ["LOW","MEDIUM","HIGH"]
 labels = pd.cut(df["Price"],bins,labels=groups,include_lowest=True)
 print(labels)
-print(df["Price"].max())
+
+
